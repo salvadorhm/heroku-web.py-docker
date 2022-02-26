@@ -10,14 +10,15 @@ Web.py webapp sample with Heroku-Docker
 
 ## 2. Gitpod for development
 
-1. Create and account in https://gitpod.io - Use Github credentials.
+1. Create and account in [GITPOD](https://gitpod.io) - Use Github credentials.
 2. Copy the Github URL.
 3. Paste de Github URL in Gipod.
 
 ```bash
-http://gitpod.io#github_url
-```
+https://gitpod.io#GITHUB_REPO_URL
 
+* THIS CREATE A CONAINER WITH VS CODE 
+```
 
 ***
 
@@ -30,7 +31,6 @@ http://gitpod.io#github_url
 ### 1. Install libraries
 
 Open webapp/ and run the next commands.
-
 
 ```bash
 $ pip3 install -r requirements.txt
@@ -49,6 +49,7 @@ $ python3 app.py
 
 http://0.0.0.0:8080/
 ```
+
 ### 3. Run webapp  with gunicorn
 
 For deploy the webapp.
@@ -140,6 +141,8 @@ Releasing images web to WEBAPP_NAME... done
 
 ```bash
 $ heroku open
+
+* THIS OPEN WEB BROWSER 
 ```
 
 ### 9. Logs webapp
