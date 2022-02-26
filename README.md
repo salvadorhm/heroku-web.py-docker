@@ -36,7 +36,8 @@ Open webapp/ and run the next commands.
 $ pip3 install -r requirements.txt
 
 Collecting web.py
-  Downloading web.py....tar.gz (1000 kB)
+  Downloading web.py-0.62.tar.gz (1000 kB)
+  ...
 ```
 
 ### 2. Run webapp
@@ -97,23 +98,43 @@ Creating ⬢ WEBAPP_NAME... done
 https://WEBAPP_NAME.herokuapp.com/ | https://git.heroku.com/WEBAPP_NAME.git
 ```
 
-### 5. Push to remote container
+### 5. Create remote container login
+
+```bash
+$ heroku container:login
+
+WARNING! Your password will be stored unencrypted in /home/gitpod/.docker/config.json.
+Configure a credential helper to remove this warning. See
+https://docs.docker.com/engine/reference/commandline/login/#credentials-store
+
+Login Succeeded
+```
+
+### 6. Push to remote container
 
 * This use the Dockerfile and heroku.yml for createa a remote contianer in Heroku.
 
 ```bash
 $ heroku container:push web
+
+=== Building web (/workspace/heroku-web.py-docker/Dockerfile)
+Sending build context to Docker daemon  92.67kB
+Step 1/12 : FROM ubuntu:20.04
+...
+Your image has been successfully pushed. You can now release it with the 'container:release' command.
 ```
 
-### 6. Release container
+### 7. Release container
 
 * If the remote container was succefull created, then relese the webapp.
 
 ```bash
 $ heroku container:release web
+
+Releasing images web to WEBAPP_NAME... done
 ```
 
-### 7. Open webapp
+### 8. Open webapp
 
 * Open in a Web Browser the Webapp deployed.
 
@@ -121,7 +142,7 @@ $ heroku container:release web
 $ heroku open
 ```
 
-### 8. Logs webapp
+### 9. Logs webapp
 
 * Show the logs of the remote webapp.
 
